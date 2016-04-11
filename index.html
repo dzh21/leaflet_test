@@ -29,25 +29,23 @@
                 {
                     "type": "Feature",
                     "properties": {
-                        "name": "Coors Field 1",
-                        "amenity": "Baseball Stadium 1",
-                        "popupContent": "Хохохо Столицо 1!"
+                        "name": "Мойка А-100",                        
+                        "popupContent": "Акции, скидки, время работы!"
                     },
                     "geometry": {
                         "type": "Point",
-                        "coordinates": [27.5517, 53.9024]
+                        "coordinates": [27.615744, 53.832542]
                     }
                 },
                 {
                     "type": "Feature",
                     "properties": {
-                        "name": "Coors Field 2",
-                        "amenity": "Baseball Stadium 2",
-                        "popupContent": "Хохохо Столицо 2!"
+                        "name": "Мойка Беларуснефть",
+                        "popupContent": "Акции, скидки, время работы"
                     },
                     "geometry": {
                         "type": "Point",
-                        "coordinates": [27.5517, 54.9024]
+                        "coordinates": [27.661102, 53.838075]
                     }
                 }
             ]               
@@ -56,7 +54,7 @@
         function onEachFeature(feature, layer) {
             // does this feature have a property named popupContent?
             if (feature.properties && feature.properties.popupContent) {
-                layer.bindPopup(feature.properties.popupContent + feature.properties.name);
+                layer.bindPopup(feature.properties.name + '<br>' + feature.properties.popupContent);
             }
         }
 
